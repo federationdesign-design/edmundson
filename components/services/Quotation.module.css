@@ -1,0 +1,70 @@
+.quotation {
+  background: var(--yellow);
+  color: var(--black);
+  padding-block: clamp(2.5rem, 1.8rem + 3vw, 5rem);
+}
+
+.inner {
+  width: var(--container);
+  margin-inline: auto;
+  display: grid;
+  gap: clamp(1.25rem, 1rem + 1vw, 2rem);
+}
+
+.handshake {
+  width: clamp(3rem, 2.4rem + 2.4vw, 5rem);
+  height: auto;
+  aspect-ratio: 1;
+  color: var(--black);
+}
+
+.title {
+  font-size: var(--step-3);
+  margin-bottom: 0.5rem;
+}
+
+.body {
+  max-width: 60ch;
+}
+
+.actions {
+  display: grid;
+  justify-items: stretch;
+  gap: 0.85rem;
+}
+
+.phone {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.6rem;
+  min-height: 3rem;
+  font-family: var(--font-heading), "Arial Narrow", Arial, sans-serif;
+  font-weight: 800;
+  font-size: var(--step-2);
+  text-decoration: none;
+  color: var(--black);
+}
+
+.phone:hover {
+  text-decoration: underline;
+  text-underline-offset: 0.15em;
+}
+
+.phoneIcon {
+  width: 1em;
+  height: 1em;
+  flex: none;
+}
+
+@media (min-width: 56.25em) {
+  .inner {
+    grid-template-columns: auto 1fr auto;
+    align-items: center;
+    column-gap: clamp(1.5rem, 1rem + 2vw, 4rem);
+  }
+
+  .actions {
+    min-width: 18rem;
+  }
+}

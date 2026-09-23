@@ -1,0 +1,67 @@
+.pennant {
+  container-type: inline-size;
+  width: clamp(13rem, 9rem + 8vw, 20rem);
+  justify-self: center;
+}
+
+/* Black and yellow hazard stripe along the top edge. */
+.stripe {
+  height: 9cqi;
+  background: repeating-linear-gradient(
+    -45deg,
+    var(--black) 0 5cqi,
+    var(--yellow) 5cqi 10cqi
+  );
+  border-block: 2.5cqi solid var(--black);
+}
+
+.panel {
+  display: grid;
+  justify-items: center;
+  gap: 6cqi;
+  padding: 10cqi 6cqi 8cqi;
+  background: var(--yellow);
+  color: var(--black);
+}
+
+.hat {
+  width: 48cqi;
+  fill: var(--black);
+}
+
+.ridge {
+  fill: none;
+  stroke: var(--yellow);
+  stroke-width: 2.5;
+  stroke-linecap: round;
+}
+
+.words {
+  display: grid;
+  justify-items: center;
+  font-family: var(--font-heading), "Arial Narrow", Arial, sans-serif;
+  font-weight: 800;
+  line-height: 1.05;
+  text-transform: uppercase;
+  text-align: center;
+}
+
+.words span {
+  display: block;
+}
+
+.words span:nth-child(1),
+.words span:nth-child(2) {
+  font-size: 17cqi;
+}
+
+.words span:nth-child(3) {
+  font-size: 12.5cqi;
+}
+
+/* Black chevron base pointing down. */
+.base {
+  height: 22cqi;
+  background: var(--black);
+  clip-path: polygon(0 0, 100% 0, 100% 40%, 50% 100%, 0 40%);
+}

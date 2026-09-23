@@ -1,0 +1,66 @@
+.checklist {
+  background: var(--white);
+  color: var(--black);
+  padding-block: var(--section-space);
+}
+
+.inner {
+  width: var(--container);
+  margin-inline: auto;
+}
+
+.title {
+  font-size: var(--step-3);
+  margin-bottom: clamp(1.75rem, 1.3rem + 2vw, 3rem);
+}
+
+.layout {
+  display: grid;
+  gap: clamp(2.5rem, 2rem + 2vw, 4rem);
+}
+
+.columns {
+  display: grid;
+  gap: 0.85rem;
+}
+
+.list {
+  display: grid;
+  align-content: start;
+  gap: 0.85rem;
+}
+
+.item {
+  display: grid;
+  grid-template-columns: auto 1fr;
+  gap: 0.75rem;
+  max-width: 48ch;
+  line-height: 1.45;
+}
+
+.item strong {
+  font-weight: 500;
+}
+
+/* Decorative (hidden from screen readers), so yellow on white is allowed. */
+.tick {
+  width: 1.25em;
+  height: 1.25em;
+  margin-top: 0.1em;
+  color: var(--yellow);
+  stroke-width: 3.5;
+}
+
+@media (min-width: 40em) {
+  .columns {
+    grid-template-columns: 1fr 1fr;
+    column-gap: clamp(1.5rem, 1rem + 2vw, 3rem);
+  }
+}
+
+@media (min-width: 64em) {
+  .layout {
+    grid-template-columns: 1fr auto;
+    align-items: start;
+  }
+}
