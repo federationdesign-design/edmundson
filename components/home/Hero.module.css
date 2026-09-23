@@ -1,48 +1,5 @@
-.hero {
-  --focus: var(--yellow);
-  position: relative;
-  isolation: isolate;
-  display: grid;
-  align-items: center;
-  min-height: min(40vw + 12rem, 60rem);
-  background: var(--black);
-  color: var(--white);
-  overflow: hidden;
-}
-
 .image {
-  z-index: -2;
-  object-fit: cover;
   object-position: 50% 22%;
-}
-
-/* Left-weighted overlay keeps white text legible over the brightest parts of
-   the photo. On narrow screens the text spans the width, so it stays dense. */
-.overlay {
-  position: absolute;
-  inset: 0;
-  z-index: -1;
-  background: color-mix(in srgb, var(--black) 80%, transparent);
-}
-
-@media (min-width: 56.25em) {
-  .overlay {
-    background: linear-gradient(
-      90deg,
-      color-mix(in srgb, var(--black) 92%, transparent) 0%,
-      color-mix(in srgb, var(--black) 85%, transparent) 38%,
-      color-mix(in srgb, var(--black) 35%, transparent) 70%,
-      color-mix(in srgb, var(--black) 5%, transparent) 100%
-    );
-  }
-}
-
-.content {
-  width: var(--container);
-  margin-inline: auto;
-  padding-block: var(--section-space);
-  display: grid;
-  justify-items: start;
 }
 
 .title {

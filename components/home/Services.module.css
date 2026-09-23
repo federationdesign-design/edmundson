@@ -1,17 +1,6 @@
 .services {
   --focus: var(--yellow);
   --divider: var(--grey-dark);
-  background-color: var(--black);
-  /* Brushed steel texture built from the black and dark grey tokens. */
-  background-image:
-    radial-gradient(ellipse at 15% 0%, var(--grey-dark), transparent 55%),
-    radial-gradient(ellipse at 90% 100%, var(--grey-dark), transparent 50%),
-    repeating-linear-gradient(
-      115deg,
-      transparent 0 0.2rem,
-      color-mix(in srgb, var(--grey-dark) 55%, transparent) 0.2rem 0.26rem
-    );
-  color: var(--white);
   padding-block: var(--section-space);
 }
 

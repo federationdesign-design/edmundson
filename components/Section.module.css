@@ -1,0 +1,25 @@
+/* Section patterns shared across pages. */
+
+/* Brushed steel texture on black, built from the black and dark grey tokens. */
+.textured {
+  background-color: var(--black);
+  background-image:
+    radial-gradient(ellipse at 15% 0%, var(--grey-dark), transparent 55%),
+    radial-gradient(ellipse at 90% 100%, var(--grey-dark), transparent 50%),
+    repeating-linear-gradient(
+      115deg,
+      transparent 0 0.2rem,
+      color-mix(in srgb, var(--grey-dark) 55%, transparent) 0.2rem 0.26rem
+    );
+  color: var(--white);
+}
+
+/* Split-colour heading accent on light backgrounds. Yellow text fails
+   contrast there, so the accent is a yellow highlight behind black text. */
+.highlight {
+  background: var(--yellow);
+  color: var(--black);
+  padding-inline: 0.15em;
+  box-decoration-break: clone;
+  -webkit-box-decoration-break: clone;
+}

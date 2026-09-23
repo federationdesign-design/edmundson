@@ -1,4 +1,5 @@
 import { CartIcon, FactoryIcon, PlusIcon, TruckIcon, UtensilsIcon } from "../icons";
+import section from "../Section.module.css";
 import styles from "./Industries.module.css";
 
 const INDUSTRIES = [
@@ -14,7 +15,7 @@ export function Industries() {
     <section className={styles.industries} aria-labelledby="industries-title">
       <div className={styles.inner}>
         <h2 id="industries-title" className={styles.title}>
-          Industries <span className={styles.accent}>we serve</span>
+          Industries <span className={section.highlight}>we serve</span>
         </h2>
         <ul className={styles.grid} role="list">
           {INDUSTRIES.map(({ label, Icon }) => (

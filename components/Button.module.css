@@ -41,6 +41,19 @@
   color: var(--black);
 }
 
+/* Dark buttons sit on the yellow band: black fill with yellow text. */
+.dark {
+  background: var(--black);
+  border-color: var(--black);
+  color: var(--yellow);
+}
+
+.dark:hover {
+  background: var(--white);
+  border-color: var(--black);
+  color: var(--black);
+}
+
 .icon {
   width: 1.1em;
   height: 1.1em;

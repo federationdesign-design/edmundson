@@ -10,6 +10,7 @@ import {
   VehicleRampIcon,
   WrenchIcon,
 } from "../icons";
+import section from "../Section.module.css";
 import styles from "./Services.module.css";
 
 type Service = {
@@ -64,7 +65,10 @@ const SERVICES: Service[] = [
 
 export function Services() {
   return (
-    <section className={styles.services} aria-labelledby="services-title">
+    <section
+      className={`${styles.services} ${section.textured}`}
+      aria-labelledby="services-title"
+    >
       <div className={styles.inner}>
         <h2 id="services-title" className={styles.title}>
           Our <span className={styles.accent}>Services</span>

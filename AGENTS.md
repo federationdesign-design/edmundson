@@ -19,3 +19,4 @@ This block is written and re-added by `next dev` — verify at `node_modules/nex
 - Cookie consent: `components/consent/`. GA4 only loads after analytics consent (Consent Mode v2, defaults denied).
 - Web images derived from the supplied originals live in `public/images/site/`. Always `git add public/`.
 - Work on feature branches; Steve pushes.
+- Shared section patterns: `components/PhotoHero.tsx` (photo hero, tall or short), `components/Section.module.css` (`textured` dark background, `highlight` for split headings on light backgrounds), `components/Button.module.css` (`primary`, `outline`, `dark`).
