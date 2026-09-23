@@ -189,3 +189,9 @@ export const HandshakeIcon = (p: IconProps) => (
     <path d="M3 4h8" />
   </Svg>
 );
+
+export const ChevronLeftIcon = (p: IconProps) => (
+  <Svg {...p}>
+    <path d="m15 18-6-6 6-6" />
+  </Svg>
+);

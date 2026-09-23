@@ -21,33 +21,3 @@
   max-width: 60ch;
   margin-bottom: clamp(1.75rem, 1.3rem + 2vw, 3rem);
 }
-
-.grid {
-  display: grid;
-  grid-template-columns: 1fr;
-  gap: clamp(1rem, 0.7rem + 1.2vw, 2rem);
-}
-
-.item {
-  position: relative;
-  aspect-ratio: 4 / 3;
-  background: var(--grey-dark);
-  border: 1px solid var(--grey-light);
-  overflow: hidden;
-}
-
-.image {
-  object-fit: cover;
-}
-
-@media (min-width: 40em) {
-  .grid {
-    grid-template-columns: repeat(2, 1fr);
-  }
-}
-
-@media (min-width: 64em) {
-  .grid {
-    grid-template-columns: repeat(3, 1fr);
-  }
-}

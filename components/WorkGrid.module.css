@@ -1,0 +1,42 @@
+.grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: clamp(1rem, 0.7rem + 1.2vw, 2rem);
+}
+
+.item {
+  position: relative;
+  aspect-ratio: 4 / 3;
+  background: var(--grey-dark);
+  border: 1px solid var(--grey-light);
+}
+
+.image {
+  object-fit: cover;
+}
+
+.tile {
+  position: absolute;
+  inset: 0;
+  padding: 0;
+  border: 0;
+  background: none;
+  cursor: zoom-in;
+}
+
+.tile:focus-visible {
+  outline: 3px solid var(--focus);
+  outline-offset: 3px;
+}
+
+@media (min-width: 40em) {
+  .grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (min-width: 64em) {
+  .grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}

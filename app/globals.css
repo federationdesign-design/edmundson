@@ -112,3 +112,8 @@ main:focus {
 html[data-menu-open] {
   overflow: hidden;
 }
+
+/* Lock page scroll behind an open modal dialog (e.g. the gallery viewer). */
+html:has(dialog[open]) {
+  overflow: hidden;
+}

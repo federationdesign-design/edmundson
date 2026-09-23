@@ -1,8 +1,9 @@
 import type { Metadata } from "next";
+import { PageHero } from "../../components/PageHero";
 import { OurWork } from "../../components/services/OurWork";
 import { Quotation } from "../../components/services/Quotation";
 import { ServiceChecklist } from "../../components/services/ServiceChecklist";
-import { ServicesHero } from "../../components/services/ServicesHero";
+import styles from "./page.module.css";
 
 export const metadata: Metadata = {
   title: "Services",
@@ -14,7 +15,16 @@ export const metadata: Metadata = {
 export default function ServicesPage() {
   return (
     <>
-      <ServicesHero />
+      <PageHero
+        id="services-hero-title"
+        src="/images/site/services-hero-staircase.jpg"
+        alt="Yellow steel staircase with chequer plate treads rising to a guarded mezzanine platform"
+        imageClassName={styles.heroImage}
+        label="Our services & work"
+        titleWhite="Expertise. Quality."
+        titleYellow="On time."
+        body="From bespoke fabrication to on-site maintenance, we provide a complete range of lifting and safety solutions. Take a look at our services below and view examples of our recent work."
+      />
       <ServiceChecklist />
       <OurWork />
       <Quotation />
