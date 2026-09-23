@@ -1,0 +1,40 @@
+.heroImage {
+  object-position: 50% 55%;
+}
+
+.contact {
+  background: var(--white);
+  color: var(--black);
+  padding-block: var(--section-space);
+}
+
+/* Mobile: details first, so the phone numbers come before the form. Desktop:
+   form on the left at two thirds, details on the right. */
+.inner {
+  width: var(--container);
+  margin-inline: auto;
+  display: grid;
+  gap: clamp(2.5rem, 2rem + 2vw, 4rem);
+}
+
+.title {
+  font-size: var(--step-3);
+  margin-bottom: clamp(1.25rem, 1rem + 1vw, 2rem);
+}
+
+@media (min-width: 56.25em) {
+  .inner {
+    grid-template-columns: 2fr 1fr;
+    align-items: start;
+  }
+
+  .formColumn {
+    grid-column: 1;
+    grid-row: 1;
+  }
+
+  .detailsColumn {
+    grid-column: 2;
+    grid-row: 1;
+  }
+}
