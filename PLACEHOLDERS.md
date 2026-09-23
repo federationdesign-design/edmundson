@@ -14,7 +14,6 @@ Content that was missing when the homepage was built. Each item is marked in cod
 |---|---|---|---|
 | Company number | `lib/site.ts` `COMPANY_NUMBER`, shown in footer | `[COMPANY NUMBER]` | Companies House number |
 | Registered office | `lib/site.ts` `REGISTERED_OFFICE`, shown in footer | `[REGISTERED OFFICE ADDRESS]` | Full registered office address |
-| Business address in JSON-LD | `app/page.tsx` `localBusiness` | Address fields omitted | Trading address, if it should appear in search results |
 
 ## Images
 
@@ -31,7 +30,6 @@ Each contains only the shared shell and an H1. Content to be briefed separately.
 
 | Route | File |
 |---|---|
-| `/contact` | `app/contact/page.tsx` |
 | `/cookies` | `app/cookies/page.tsx` (cookie policy text needed; the consent banner links here) |
 | `/privacy` | `app/privacy/page.tsx` (privacy notice text needed) |
 | `/terms` | `app/terms/page.tsx` (terms text needed) |
@@ -44,10 +42,17 @@ Each contains only the shared shell and an H1. Content to be briefed separately.
 | `NEXT_PUBLIC_GSC_VERIFICATION` | Not set. The verification meta tag is omitted until it is set in Vercel |
 | `GOOGLE_DRIVE_FOLDER_ID` | Not set. The Our Work gallery shows the nine local photos until it is set in Vercel |
 | `GOOGLE_DRIVE_API_KEY` | Not set. Server-only; restrict it to the Drive API in Google Cloud. Never prefix it with `NEXT_PUBLIC_` |
+| `RESEND_API_KEY` | Not set. Server-only. Until it and the two below are set in Vercel, the contact form shows its "could not be sent" message with the office number |
+| `CONTACT_TO_EMAIL` | Not set. Expected: `sales@edmondsonlifting.co.uk` |
+| `CONTACT_FROM_EMAIL` | Not set. Must be on a domain verified in Resend, e.g. `Edmondson Lifting Website <website@edmondsonlifting.co.uk>` |
 
 ## Our Work gallery: live Drive feed untested
 
 No real Drive credentials were available, so the Drive path was tested against a mocked Drive API only (listing with pagination, JPEG, PNG and HEIC files, filtering, alt text, the image route, and the failure fallbacks). Once the two variables above are set in Vercel, check `/our-work` on the preview deployment shows the folder's photos. If it still shows the nine local photos, the Vercel function logs will contain a `[drive]` line saying why.
+
+## Contact form: live sending untested
+
+Sending was tested against a mocked Resend API only (recipient, sender, Reply-To, subject, HTML escaping, spam checks and failures). Before launch, verify `edmondsonlifting.co.uk` as a sending domain in Resend (SPF and DKIM records in DNS), set the three variables above in Vercel, and send one real test enquiry from the preview deployment.
 
 ## Client instructions for the gallery folder
 
