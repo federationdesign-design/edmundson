@@ -23,6 +23,7 @@ Content that was missing when the homepage was built. Each item is marked in cod
 | Engineer photograph for "Get in touch today" band | `components/home/ContactCta.tsx` | Neutral dark gradient background | Landscape photo of an engineer, at least 2400px wide |
 | High resolution hero image | `public/images/site/hero-gantry-crane.jpg` | Supplied gantry photo `5925227a-...JPG` (900 x 1600 portrait), cropped by CSS | Landscape gantry crane photo, at least 2400px wide; the current file is soft on large screens |
 | Separate IPAF Harness Inspectors logo | `components/home/Qualifications.tsx` | Same `IPAF.png` used for both IPAF entries | The harness inspector variant, if one exists |
+| Higher resolution Our Work photos | `components/services/OurWork.tsx` | `work-lifting-beam.jpg` (438px wide, from `image001.png`), `work-gantry-platform.jpg` and `work-access-ladder.jpg` (591px wide, cropped from phone screenshots `IMG_6491.PNG` and `IMG_6493.PNG`) | Original camera files; these three are soft on large and high-density screens |
 
 ## Route stubs
 
@@ -30,7 +31,6 @@ Each contains only the shared shell and an H1. Content to be briefed separately.
 
 | Route | File |
 |---|---|
-| `/services` | `app/services/page.tsx` |
 | `/our-work` | `app/our-work/page.tsx` |
 | `/contact` | `app/contact/page.tsx` |
 | `/cookies` | `app/cookies/page.tsx` (cookie policy text needed; the consent banner links here) |
