@@ -10,58 +10,22 @@ import {
   VehicleRampIcon,
   WrenchIcon,
 } from "../icons";
+import { SERVICES } from "../../lib/services";
 import section from "../Section.module.css";
 import styles from "./Services.module.css";
 
-type Service = {
-  title: string;
-  description: string;
-  Icon: ComponentType<SVGProps<SVGSVGElement>>;
-};
+type Icon = ComponentType<SVGProps<SVGSVGElement>>;
 
-const SERVICES: Service[] = [
-  {
-    title: "Inspections & load tests",
-    description: "In house or on site, across England, Scotland and Wales.",
-    Icon: ClipboardCheckIcon,
-  },
-  {
-    title: "Supply of lifting & safety equipment",
-    description: "Quality equipment for a safer workplace.",
-    Icon: LinkIcon,
-  },
-  {
-    title: "Repairs",
-    description: "Fast, reliable repairs for lifting and safety equipment.",
-    Icon: WrenchIcon,
-  },
-  {
-    title: "Fabrication",
-    description: "Runways, swing arms and lifting apparatus, all installed by our team.",
-    Icon: CogIcon,
-  },
-  {
-    title: "On-site maintenance",
-    description: "Keeping your site safe and operational.",
-    Icon: HardHatIcon,
-  },
-  {
-    title: "Partition doors",
-    description: "Inspection and assessment of partition doors.",
-    Icon: DoorIcon,
-  },
-  {
-    title: "Vehicle ramps & tail lifts",
-    description:
-      "Inspection and repairs on vehicle ramps, scissor tables and tail lifts.",
-    Icon: VehicleRampIcon,
-  },
-  {
-    title: "24 hour assistance",
-    description: "Always here when you need us.",
-    Icon: ClockIcon,
-  },
-];
+const ICONS: Record<(typeof SERVICES)[number]["title"], Icon> = {
+  "Inspections & load tests": ClipboardCheckIcon,
+  "Supply of lifting & safety equipment": LinkIcon,
+  Repairs: WrenchIcon,
+  Fabrication: CogIcon,
+  "On-site maintenance": HardHatIcon,
+  "Partition doors": DoorIcon,
+  "Vehicle ramps & tail lifts": VehicleRampIcon,
+  "24 hour assistance": ClockIcon,
+};
 
 export function Services() {
   return (
@@ -74,17 +38,20 @@ export function Services() {
           Our <span className={styles.accent}>Services</span>
         </h2>
         <ul className={styles.grid} role="list">
-          {SERVICES.map(({ title, description, Icon }) => (
-            <li key={title} className={styles.item}>
-              <Link href="/services" className={styles.link}>
-                <span className={styles.tile}>
-                  <Icon className={styles.icon} />
-                </span>
-                <h3 className={styles.itemTitle}>{title}</h3>
-                <p className={styles.description}>{description}</p>
-              </Link>
-            </li>
-          ))}
+          {SERVICES.map(({ title, description }) => {
+            const Icon = ICONS[title];
+            return (
+              <li key={title} className={styles.item}>
+                <Link href="/services" className={styles.link}>
+                  <span className={styles.tile}>
+                    <Icon className={styles.icon} />
+                  </span>
+                  <h3 className={styles.itemTitle}>{title}</h3>
+                  <p className={styles.description}>{description}</p>
+                </Link>
+              </li>
+            );
+          })}
         </ul>
       </div>
     </section>

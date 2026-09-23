@@ -6,6 +6,7 @@ import { useCallback, useEffect, useId, useRef, useState } from "react";
 import { EMAIL, EMAIL_HREF, NAV_LINKS, PHONE_DISPLAY, PHONE_HREF } from "../lib/site";
 import { CloseIcon, MailIcon, MenuIcon, PhoneIcon } from "./icons";
 import { Logo } from "./Logo";
+import section from "./Section.module.css";
 import styles from "./Header.module.css";
 
 function isActive(pathname: string, href: string) {
@@ -72,7 +73,7 @@ function MobileControls({
       <a href={PHONE_HREF} className={styles.mobilePhone}>
         <PhoneIcon className={styles.contactIcon} />
         <span className={styles.mobilePhoneNumber}>{PHONE_DISPLAY}</span>
-        <span className={styles.visuallyHidden}> (call us)</span>
+        <span className={section.visuallyHidden}> (call us)</span>
       </a>
       <button
         type="button"
@@ -82,7 +83,7 @@ function MobileControls({
         onClick={(e) => onOpen(e.currentTarget)}
       >
         <MenuIcon className={styles.menuIcon} />
-        <span className={styles.visuallyHidden}>Menu</span>
+        <span className={section.visuallyHidden}>Menu</span>
       </button>
     </div>
   );
@@ -210,7 +211,7 @@ export function Header() {
           <Logo compact />
           <button type="button" className={styles.menuButton} onClick={() => closeMenu()}>
             <CloseIcon className={styles.menuIcon} />
-            <span className={styles.visuallyHidden}>Close menu</span>
+            <span className={section.visuallyHidden}>Close menu</span>
           </button>
         </div>
         <nav className={styles.panelNav} aria-label="Main, mobile">

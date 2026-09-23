@@ -40,6 +40,8 @@
 html {
   -webkit-text-size-adjust: 100%;
   text-size-adjust: 100%;
+  /* Keep focused elements and anchor targets clear of the sticky header. */
+  scroll-padding-top: calc(var(--sticky-height) + 1rem);
 }
 
 body {
