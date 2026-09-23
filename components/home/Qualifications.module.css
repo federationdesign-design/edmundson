@@ -1,0 +1,106 @@
+.qualifications {
+  --focus: var(--yellow);
+  --q-gap: clamp(1.2rem, 0.6rem + 1.6vw, 2.5rem);
+  background: var(--black);
+  color: var(--white);
+  padding-block: clamp(2.5rem, 1.8rem + 3vw, 5rem);
+}
+
+.inner {
+  width: var(--container);
+  margin-inline: auto;
+}
+
+.title {
+  font-size: var(--step-3);
+  margin-bottom: clamp(1.75rem, 1.3rem + 2vw, 3rem);
+}
+
+.accent {
+  color: var(--yellow);
+}
+
+.scroller {
+  width: var(--container);
+  margin-inline: auto;
+  overflow-x: auto;
+  overscroll-behavior-x: contain;
+  scroll-snap-type: x proximity;
+  scrollbar-color: var(--yellow) var(--grey-dark);
+  padding-bottom: 1rem;
+}
+
+.list {
+  display: grid;
+  grid-auto-flow: column;
+  grid-auto-columns: 9.5rem;
+  column-gap: var(--q-gap);
+}
+
+.item {
+  display: grid;
+  align-content: start;
+  justify-items: center;
+  gap: 0.85rem;
+  position: relative;
+  text-align: center;
+  scroll-snap-align: start;
+}
+
+/* Dividers sit centred in the column gap so every tile is the same width. */
+.item + .item::before {
+  content: "";
+  position: absolute;
+  inset: 0 auto 0 calc(var(--q-gap) / -2);
+  width: 1px;
+  background: var(--grey-dark);
+}
+
+/* Logos sit on white tiles: several have dark lettering that would vanish
+   on black. The artwork itself is untouched. */
+.tile {
+  position: relative;
+  display: grid;
+  place-items: center;
+  width: 100%;
+  aspect-ratio: 16 / 10;
+  background: var(--white);
+}
+
+.logo {
+  object-fit: contain;
+  padding: 0.6rem;
+}
+
+.placeholder {
+  font-family: var(--font-heading), "Arial Narrow", Arial, sans-serif;
+  font-weight: 700;
+  color: var(--black);
+}
+
+.caption {
+  display: grid;
+  gap: 0.15rem;
+  font-size: var(--step--1);
+  line-height: 1.35;
+}
+
+.name {
+  font-family: var(--font-heading), "Arial Narrow", Arial, sans-serif;
+  font-weight: 700;
+  font-size: var(--step-0);
+  text-transform: uppercase;
+}
+
+@media (min-width: 64em) {
+  .scroller {
+    overflow-x: visible;
+    padding-bottom: 0;
+  }
+
+  .list {
+    grid-auto-flow: row;
+    grid-template-columns: repeat(7, minmax(0, 1fr));
+    grid-auto-columns: auto;
+  }
+}

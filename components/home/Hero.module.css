@@ -1,0 +1,99 @@
+.hero {
+  --focus: var(--yellow);
+  position: relative;
+  isolation: isolate;
+  display: grid;
+  align-items: center;
+  min-height: min(40vw + 12rem, 60rem);
+  background: var(--black);
+  color: var(--white);
+  overflow: hidden;
+}
+
+.image {
+  z-index: -2;
+  object-fit: cover;
+  object-position: 50% 22%;
+}
+
+/* Left-weighted overlay keeps white text legible over the brightest parts of
+   the photo. On narrow screens the text spans the width, so it stays dense. */
+.overlay {
+  position: absolute;
+  inset: 0;
+  z-index: -1;
+  background: color-mix(in srgb, var(--black) 80%, transparent);
+}
+
+@media (min-width: 56.25em) {
+  .overlay {
+    background: linear-gradient(
+      90deg,
+      color-mix(in srgb, var(--black) 92%, transparent) 0%,
+      color-mix(in srgb, var(--black) 85%, transparent) 38%,
+      color-mix(in srgb, var(--black) 35%, transparent) 70%,
+      color-mix(in srgb, var(--black) 5%, transparent) 100%
+    );
+  }
+}
+
+.content {
+  width: var(--container);
+  margin-inline: auto;
+  padding-block: var(--section-space);
+  display: grid;
+  justify-items: start;
+}
+
+.title {
+  font-size: var(--step-4);
+  line-height: 0.98;
+  margin-bottom: clamp(0.75rem, 0.5rem + 1vw, 1.5rem);
+}
+
+.titleWhite,
+.titleYellow {
+  display: block;
+}
+
+.titleWhite {
+  color: var(--white);
+}
+
+.titleYellow {
+  color: var(--yellow);
+}
+
+.straplineWrap {
+  overflow: hidden;
+  margin-bottom: clamp(1rem, 0.7rem + 1vw, 1.75rem);
+}
+
+/* Every item carries a leading separator and the list is pulled left by one
+   separator width, so the separator starting each wrapped line is clipped. */
+.strapline {
+  --sep-space: 0.8em;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  row-gap: 0.35rem;
+  margin-left: calc(-2 * var(--sep-space) - 2px);
+  font-family: var(--font-heading), "Arial Narrow", Arial, sans-serif;
+  font-weight: 700;
+  font-size: var(--step-1);
+  letter-spacing: 0.03em;
+  text-transform: uppercase;
+}
+
+/* Separators are borders, so screen readers read only the four words. */
+.strapline li {
+  margin-left: var(--sep-space);
+  padding-left: var(--sep-space);
+  border-left: 2px solid var(--white);
+  line-height: 1;
+}
+
+.body {
+  max-width: 58ch;
+  margin-bottom: clamp(1.5rem, 1rem + 1.5vw, 2.5rem);
+}

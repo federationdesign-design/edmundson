@@ -1,0 +1,58 @@
+.partner {
+  display: grid;
+  grid-template-columns: var(--gutter) 1fr var(--gutter);
+  row-gap: clamp(2rem, 1.5rem + 2vw, 3rem);
+  padding-top: var(--section-space);
+  background: var(--white);
+  color: var(--black);
+}
+
+.text {
+  grid-column: 2;
+}
+
+.title {
+  font-size: var(--step-3);
+  margin-bottom: clamp(1rem, 0.8rem + 0.8vw, 1.5rem);
+}
+
+.body {
+  max-width: 60ch;
+}
+
+.media {
+  grid-column: 1 / -1;
+  position: relative;
+  aspect-ratio: 5 / 4;
+  background: var(--black);
+}
+
+.image {
+  object-fit: cover;
+}
+
+/* Desktop: text sits in the left half of the container, the image runs from
+   the container midpoint to the right edge of the viewport. */
+@media (min-width: 56.25em) {
+  .partner {
+    grid-template-columns:
+      1fr
+      calc(var(--container) / 2)
+      calc(var(--container) / 2)
+      1fr;
+    align-items: center;
+    padding-block: clamp(1.5rem, 1rem + 1.5vw, 3rem);
+  }
+
+  .text {
+    grid-column: 2;
+    padding-right: clamp(2rem, 1rem + 3vw, 5rem);
+    padding-block: var(--section-space);
+  }
+
+  .media {
+    grid-column: 3 / 5;
+    aspect-ratio: 4 / 3;
+    max-height: min(80vh, 45rem);
+  }
+}
