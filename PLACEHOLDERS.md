@@ -31,7 +31,6 @@ Each contains only the shared shell and an H1. Content to be briefed separately.
 
 | Route | File |
 |---|---|
-| `/our-work` | `app/our-work/page.tsx` |
 | `/contact` | `app/contact/page.tsx` |
 | `/cookies` | `app/cookies/page.tsx` (cookie policy text needed; the consent banner links here) |
 | `/privacy` | `app/privacy/page.tsx` (privacy notice text needed) |
@@ -43,3 +42,17 @@ Each contains only the shared shell and an H1. Content to be briefed separately.
 |---|---|
 | `NEXT_PUBLIC_GA_MEASUREMENT_ID` | Not set. GA does not load until it is set in Vercel |
 | `NEXT_PUBLIC_GSC_VERIFICATION` | Not set. The verification meta tag is omitted until it is set in Vercel |
+| `GOOGLE_DRIVE_FOLDER_ID` | Not set. The Our Work gallery shows the nine local photos until it is set in Vercel |
+| `GOOGLE_DRIVE_API_KEY` | Not set. Server-only; restrict it to the Drive API in Google Cloud. Never prefix it with `NEXT_PUBLIC_` |
+
+## Our Work gallery: live Drive feed untested
+
+No real Drive credentials were available, so the Drive path was tested against a mocked Drive API only (listing with pagination, JPEG, PNG and HEIC files, filtering, alt text, the image route, and the failure fallbacks). Once the two variables above are set in Vercel, check `/our-work` on the preview deployment shows the folder's photos. If it still shows the nine local photos, the Vercel function logs will contain a `[drive]` line saying why.
+
+## Client instructions for the gallery folder
+
+- **Adding photos:** upload them to the shared Google Drive gallery folder. JPEG, PNG, WebP and iPhone (HEIC) photos all work.
+- **When they appear:** new photos show on the Our Work page within an hour, newest first. There is nothing else to do.
+- **Captions:** to give a photo a caption, right-click it in Google Drive, choose **File information**, then **Details**, and type a short description of what the photo shows. This becomes the caption and the text read out to people using screen readers. Without one, a descriptive file name is used instead, such as "Loading bay handrail, Barton".
+- **Removing photos:** delete the photo from the folder and it disappears from the website within an hour.
+- **Keep it tidy:** only put finished, client-safe photos in this folder, as everything in it is shown publicly.

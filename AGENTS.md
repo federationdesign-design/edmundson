@@ -20,3 +20,4 @@ This block is written and re-added by `next dev` — verify at `node_modules/nex
 - Web images derived from the supplied originals live in `public/images/site/`. Always `git add public/`.
 - Work on feature branches; Steve pushes.
 - Shared section patterns: `components/PhotoHero.tsx` (photo hero, tall or short), `components/Section.module.css` (`textured` dark background, `highlight` for split headings on light backgrounds), `components/Button.module.css` (`primary`, `outline`, `dark`).
+- Our Work gallery: `lib/drive.ts` (server-only) lists the Google Drive folder, cached for an hour; images stream through `app/api/work-image/[id]`, which only serves listed IDs. Any Drive failure falls back to `LOCAL_WORK_PHOTOS` in `lib/workPhotos.ts`. `components/WorkGrid.tsx` is the shared grid; `components/PageHero.tsx` the inner-page hero.
