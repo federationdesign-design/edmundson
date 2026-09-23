@@ -1,0 +1,33 @@
+.logo {
+  --focus: var(--yellow);
+  display: inline-grid;
+  justify-items: start;
+  font-family: var(--font-heading), "Arial Narrow", Arial, sans-serif;
+  font-weight: 800;
+  text-transform: uppercase;
+  text-decoration: none;
+  line-height: 0.95;
+  font-size: clamp(1.2rem, 0.95rem + 1vw, 2.1rem);
+  padding-bottom: 0.3em;
+  border-bottom: 0.12em solid var(--yellow);
+}
+
+.compact {
+  font-size: clamp(1.05rem, 0.9rem + 0.5vw, 1.45rem);
+}
+
+.top {
+  color: var(--white);
+  letter-spacing: 0.01em;
+}
+
+.bottom {
+  color: var(--yellow);
+}
+
+.ltd {
+  color: var(--white);
+  font-weight: 700;
+  font-size: 0.6em;
+  text-transform: none;
+}

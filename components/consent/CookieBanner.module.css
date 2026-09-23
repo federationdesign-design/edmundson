@@ -1,0 +1,111 @@
+.banner {
+  --focus: var(--yellow);
+  position: fixed;
+  inset: auto 0 0 0;
+  z-index: 60;
+  max-height: 70vh;
+  overflow-y: auto;
+  background: var(--black);
+  color: var(--white);
+  border-top: 0.25rem solid var(--yellow);
+}
+
+.inner {
+  width: var(--container);
+  margin-inline: auto;
+  padding-block: clamp(1rem, 0.8rem + 1vw, 1.75rem);
+  display: grid;
+  gap: clamp(0.75rem, 0.6rem + 0.6vw, 1.25rem);
+}
+
+.text p {
+  max-width: 70ch;
+  font-size: var(--step--1);
+}
+
+.text a {
+  color: var(--yellow);
+}
+
+.title {
+  font-family: var(--font-heading);
+  font-weight: 800;
+  font-size: var(--step-1);
+  text-transform: uppercase;
+  margin-bottom: 0.35em;
+}
+
+.title:focus {
+  outline: none;
+}
+
+.title:focus-visible {
+  outline: 3px solid var(--focus);
+  outline-offset: 3px;
+}
+
+.prefs {
+  border: 1px solid var(--grey-dark);
+  background: var(--grey-dark);
+  padding: clamp(0.75rem, 0.6rem + 0.6vw, 1.25rem);
+  display: grid;
+  gap: 0.75rem;
+}
+
+.legend {
+  font-family: var(--font-heading);
+  font-weight: 700;
+  text-transform: uppercase;
+  font-size: var(--step-0);
+  float: left;
+  width: 100%;
+}
+
+.option {
+  display: flex;
+  gap: 0.75rem;
+  align-items: flex-start;
+  font-size: var(--step--1);
+}
+
+.option input {
+  inline-size: 1.25rem;
+  block-size: 1.25rem;
+  margin-top: 0.15rem;
+  flex: none;
+  accent-color: var(--yellow);
+}
+
+.option label {
+  display: grid;
+  gap: 0.15rem;
+  max-width: 65ch;
+}
+
+.actions {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(min(100%, 14rem), 1fr));
+  gap: 0.75rem;
+  max-width: 50rem;
+}
+
+/* All three choices share one style so none is more prominent. */
+.button {
+  font-family: var(--font-heading);
+  font-weight: 700;
+  font-size: var(--step-0);
+  text-transform: uppercase;
+  letter-spacing: 0.02em;
+  min-height: 2.9rem;
+  line-height: 1.1;
+  padding: 0.6rem 1.25rem;
+  border: 2px solid var(--yellow);
+  background: var(--yellow);
+  color: var(--black);
+  cursor: pointer;
+}
+
+.button:hover {
+  background: var(--white);
+  border-color: var(--white);
+}

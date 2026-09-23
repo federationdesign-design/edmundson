@@ -1,0 +1,114 @@
+/* Brand tokens: the only colours used anywhere on the site. */
+:root {
+  --yellow: #fdc303;
+  --black: #000000;
+  --white: #ffffff;
+  --grey-dark: #1a1a1a;
+  --grey-light: #f2f2f2;
+
+  /* Focus ring colour: black on light surfaces, dark sections override to yellow. */
+  --focus: var(--black);
+
+  /* Liquid type scale: every step scales with viewport width. */
+  --step--1: clamp(0.875rem, 0.84rem + 0.15vw, 1rem);
+  --step-0: clamp(1rem, 0.95rem + 0.25vw, 1.25rem);
+  --step-1: clamp(1.125rem, 1.05rem + 0.4vw, 1.5rem);
+  --step-2: clamp(1.25rem, 1.1rem + 0.75vw, 2rem);
+  --step-3: clamp(1.75rem, 1.3rem + 2vw, 3.75rem);
+  --step-4: clamp(2.5rem, 1.4rem + 4vw, 7rem);
+
+  --gutter: clamp(1rem, 0.5rem + 2.5vw, 3rem);
+  --container: min(100% - 2 * var(--gutter), 75rem + 20vw);
+  --section-space: clamp(3rem, 2rem + 4vw, 7rem);
+  --measure: 65ch;
+
+  --header-height: clamp(4.25rem, 3.6rem + 2.4vw, 6.5rem);
+  --sticky-height: clamp(3.5rem, 3.2rem + 1vw, 4.5rem);
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  -webkit-text-size-adjust: 100%;
+  text-size-adjust: 100%;
+}
+
+body {
+  background: var(--white);
+  color: var(--black);
+  font-family:
+    var(--font-body),
+    system-ui,
+    -apple-system,
+    "Segoe UI",
+    Arial,
+    sans-serif;
+  font-weight: 400;
+  font-size: var(--step-0);
+  line-height: 1.6;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+h1,
+h2,
+h3,
+h4 {
+  font-family: var(--font-heading), "Arial Narrow", Arial, sans-serif;
+  font-weight: 800;
+  line-height: 1.05;
+  text-transform: uppercase;
+  text-wrap: balance;
+}
+
+img,
+svg {
+  display: block;
+  max-width: 100%;
+}
+
+a {
+  color: inherit;
+}
+
+button {
+  font: inherit;
+  color: inherit;
+}
+
+ul[role="list"],
+ol[role="list"] {
+  list-style: none;
+}
+
+:focus-visible {
+  outline: 3px solid var(--focus);
+  outline-offset: 3px;
+}
+
+main:focus {
+  outline: none;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+html[data-menu-open] {
+  overflow: hidden;
+}
