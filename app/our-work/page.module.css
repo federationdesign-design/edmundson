@@ -1,0 +1,13 @@
+.heroImage {
+  object-position: 50% 60%;
+}
+
+.gallery {
+  --focus: var(--yellow);
+  padding-block: var(--section-space);
+}
+
+.inner {
+  width: var(--container);
+  margin-inline: auto;
+}
