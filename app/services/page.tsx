@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import Link from "next/link";
 import { PageHero } from "../../components/PageHero";
 import { Quotation } from "../../components/services/Quotation";
 import { ServiceChecklist } from "../../components/services/ServiceChecklist";
@@ -22,7 +23,13 @@ export default function ServicesPage() {
         label="Our services & work"
         titleWhite="Expertise. Quality."
         titleYellow="On time."
-        body="From bespoke fabrication to on-site maintenance, we provide a complete range of lifting and safety solutions. Take a look at our services below and view examples of our recent work."
+        body={
+          <>
+            From bespoke fabrication to on-site maintenance, we provide a complete range
+            of lifting and safety solutions. Take a look at our services below and{" "}
+            <Link href="/our-work">view examples of our recent work</Link>.
+          </>
+        }
       />
       <ServiceChecklist />
       <Quotation />

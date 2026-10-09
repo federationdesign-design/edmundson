@@ -30,3 +30,16 @@
 .body {
   max-width: 55ch;
 }
+
+/* Inline links in the body sit on the dark hero, so they are yellow and
+   underlined. Focus uses the yellow outline set by PhotoHero. */
+.body a {
+  color: var(--yellow);
+  text-decoration: underline;
+  text-decoration-thickness: 0.08em;
+  text-underline-offset: 0.2em;
+}
+
+.body a:hover {
+  text-decoration-thickness: 0.15em;
+}

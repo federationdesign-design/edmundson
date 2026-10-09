@@ -1,3 +1,4 @@
+import type { ReactNode } from "react";
 import { PhotoHero } from "./PhotoHero";
 import styles from "./PageHero.module.css";
 
@@ -10,7 +11,8 @@ type PageHeroProps = {
   label: string;
   titleWhite: string;
   titleYellow: string;
-  body: string;
+  /** Plain text, or text containing inline links. */
+  body: ReactNode;
 };
 
 // Short inner-page hero: yellow label, two-line H1 (white then yellow), body.
