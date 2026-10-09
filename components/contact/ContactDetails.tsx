@@ -4,18 +4,10 @@ import {
   EMAIL,
   EMAIL_HREF,
   MAPS_URL,
-  MOBILE_DISPLAY,
-  MOBILE_HREF,
   PHONE_DISPLAY,
   PHONE_HREF,
 } from "../../lib/site";
-import {
-  ExternalLinkIcon,
-  MailIcon,
-  MapPinIcon,
-  PhoneIcon,
-  SmartphoneIcon,
-} from "../icons";
+import { ExternalLinkIcon, MailIcon, MapPinIcon, PhoneIcon } from "../icons";
 import section from "../Section.module.css";
 import styles from "./ContactDetails.module.css";
 
@@ -46,9 +38,6 @@ export function ContactDetails() {
       <dl className={styles.list}>
         <Item label="Office" Icon={PhoneIcon}>
           <a href={PHONE_HREF}>{PHONE_DISPLAY}</a>
-        </Item>
-        <Item label="Mobile" Icon={SmartphoneIcon}>
-          <a href={MOBILE_HREF}>{MOBILE_DISPLAY}</a>
         </Item>
         <Item label="Email" Icon={MailIcon}>
           <a href={EMAIL_HREF} className={styles.email}>

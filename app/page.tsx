@@ -5,14 +5,7 @@ import { Industries } from "../components/home/Industries";
 import { Partner } from "../components/home/Partner";
 import { Qualifications } from "../components/home/Qualifications";
 import { Services } from "../components/home/Services";
-import {
-  ADDRESS,
-  EMAIL,
-  MOBILE_HREF,
-  PHONE_HREF,
-  SITE_NAME,
-  SITE_URL,
-} from "../lib/site";
+import { ADDRESS, EMAIL, PHONE_HREF, SITE_NAME, SITE_URL } from "../lib/site";
 
 export const metadata: Metadata = {
   // The layout title template does not apply to its own segment, so set it in full.
@@ -25,7 +18,7 @@ const localBusiness = {
   "@type": "LocalBusiness",
   name: SITE_NAME,
   url: SITE_URL,
-  telephone: [PHONE_HREF, MOBILE_HREF].map((href) => href.replace("tel:", "")),
+  telephone: PHONE_HREF.replace("tel:", ""),
   email: EMAIL,
   address: {
     "@type": "PostalAddress",

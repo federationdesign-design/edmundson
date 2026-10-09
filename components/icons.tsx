@@ -196,13 +196,6 @@ export const ChevronLeftIcon = (p: IconProps) => (
   </Svg>
 );
 
-export const SmartphoneIcon = (p: IconProps) => (
-  <Svg {...p}>
-    <rect width="14" height="20" x="5" y="2" rx="2" />
-    <path d="M12 18h.01" />
-  </Svg>
-);
-
 export const MapPinIcon = (p: IconProps) => (
   <Svg {...p}>
     <path d="M20 10c0 4.99-5.54 10.19-7.4 11.8a1 1 0 0 1-1.2 0C9.54 20.19 4 14.99 4 10a8 8 0 0 1 16 0" />
