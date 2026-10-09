@@ -1,20 +1,23 @@
+import Image from "next/image";
 import Link from "next/link";
+import logoWhiteText from "../public/images/brand/logo-white-text.png";
 import styles from "./Logo.module.css";
 
-// PLACEHOLDER: no logo file was supplied, so the company name is set as a
-// text wordmark. Swap for the supplied logo artwork (see PLACEHOLDERS.md).
+// Supplied logo, white-text version for the black header, sticky header and
+// mobile menu. public/images/brand/logo.png is the version for light
+// backgrounds.
 export function Logo({ compact = false }: { compact?: boolean }) {
   return (
-    <Link
-      href="/"
-      className={compact ? `${styles.logo} ${styles.compact}` : styles.logo}
-      aria-label="Edmondson Lifting Ltd, home"
-      data-placeholder="logo"
-    >
-      <span className={styles.top}>Edmondson</span>
-      <span className={styles.bottom}>
-        Lifting <span className={styles.ltd}>Ltd</span>
-      </span>
+    <Link href="/" className={styles.logo}>
+      <Image
+        src={logoWhiteText}
+        alt="Edmondson Lifting Ltd"
+        className={compact ? `${styles.image} ${styles.compact}` : styles.image}
+        sizes={compact ? "9rem" : "14rem"}
+        // The static header logo is visible on load; the compact copies sit in
+        // the hidden sticky header and closed menu panel.
+        loading={compact ? "lazy" : "eager"}
+      />
     </Link>
   );
 }

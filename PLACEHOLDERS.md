@@ -2,12 +2,6 @@
 
 Content that was missing when the homepage was built. Each item is marked in code with a `PLACEHOLDER` comment and, where rendered, a `data-placeholder` attribute.
 
-## Brand
-
-| Item | Where | Current placeholder | Needed |
-|---|---|---|---|
-| Company logo | `components/Logo.tsx` (header, sticky header, mobile menu) | Company name set as a text wordmark in the brand fonts and colours | Logo artwork (SVG preferred) |
-
 ## Company details
 
 | Item | Where | Current placeholder | Needed |
