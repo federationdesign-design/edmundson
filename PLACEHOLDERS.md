@@ -11,17 +11,6 @@ Content that was missing when the homepage was built. Each item is marked in cod
 | Separate IPAF Harness Inspectors logo | `components/home/Qualifications.tsx` | Same `IPAF.png` used for both IPAF entries | The harness inspector variant, if one exists |
 | Higher resolution Our Work photos | `components/services/OurWork.tsx` | `work-lifting-beam.jpg` (438px wide, from `image001.png`), `work-gantry-platform.jpg` and `work-access-ladder.jpg` (591px wide, cropped from phone screenshots `IMG_6491.PNG` and `IMG_6493.PNG`) | Original camera files; these three are soft on large and high-density screens |
 
-## Legal pages
-
-Placeholders in `app/privacy/page.tsx`. The privacy policy shows them in square brackets until the facts are confirmed.
-
-| Placeholder | Section | Needed |
-|---|---|---|
-| `[INTERNATIONAL TRANSFER SAFEGUARDS]` | International transfers | The safeguard relied on for Vercel, Resend and Google processing outside the UK (for example the UK International Data Transfer Addendum or the UK Extension to the EU-US Data Privacy Framework), confirmed against each provider's terms |
-| `[ENQUIRY RETENTION PERIOD]` | How long we keep your data | How long the sales team keeps enquiry emails |
-| `[RESEND RETENTION PERIOD]` | How long we keep your data | How long Resend keeps copies of sent enquiry emails on the account's plan |
-| `[GOOGLE ANALYTICS DATA RETENTION PERIOD]` | How long we keep your data | The data retention setting chosen in the Google Analytics 4 property |
-
 ## Environment
 
 | Variable | Status |

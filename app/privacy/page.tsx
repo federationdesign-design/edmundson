@@ -19,8 +19,6 @@ export const metadata: Metadata = {
   alternates: { canonical: "/privacy" },
 };
 
-// PLACEHOLDER: retention periods and transfer safeguards are not yet confirmed
-// (see PLACEHOLDERS.md).
 const sections: LegalSection[] = [
   {
     heading: "Who we are",
@@ -141,8 +139,10 @@ const sections: LegalSection[] = [
     heading: "International transfers",
     content: (
       <p>
-        Vercel, Resend and Google may process your data outside the UK. Where they do, we
-        rely on the following safeguards: [INTERNATIONAL TRANSFER SAFEGUARDS].
+        Vercel, Resend and Google may process your data outside the UK. Where data is
+        transferred outside the UK, we rely on safeguards recognised under UK law, such as
+        the UK International Data Transfer Agreement or Addendum, or the UK Extension to
+        the EU-US Data Privacy Framework.
       </p>
     ),
   },
@@ -155,9 +155,9 @@ const sections: LegalSection[] = [
           collected for:
         </p>
         <ul>
-          <li>Enquiries received by email: [ENQUIRY RETENTION PERIOD]</li>
-          <li>Copies of enquiry emails held by Resend: [RESEND RETENTION PERIOD]</li>
-          <li>Google Analytics data: [GOOGLE ANALYTICS DATA RETENTION PERIOD]</li>
+          <li>Enquiries received by email: 36 months</li>
+          <li>Copies of enquiry emails held by Resend: 36 months</li>
+          <li>Google Analytics data: 24 months</li>
         </ul>
       </>
     ),
