@@ -1,0 +1,130 @@
+.page {
+  background: var(--white);
+  color: var(--black);
+  padding-bottom: var(--section-space);
+}
+
+.inner {
+  width: var(--container);
+  max-width: 50rem;
+  margin-inline: auto;
+}
+
+.header {
+  --focus: var(--yellow);
+  background: var(--black);
+  color: var(--white);
+  padding-block: clamp(2rem, 1.5rem + 2vw, 3.5rem);
+  margin-bottom: clamp(2rem, 1.5rem + 2vw, 3.5rem);
+}
+
+.breadcrumb {
+  font-size: var(--step--1);
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  margin-bottom: 0.75rem;
+}
+
+.breadcrumb a {
+  color: var(--yellow);
+}
+
+.title {
+  font-size: var(--step-4);
+  margin-bottom: 0.75rem;
+}
+
+.updated {
+  font-size: var(--step--1);
+}
+
+.section {
+  padding-bottom: clamp(1.5rem, 1.2rem + 1vw, 2.25rem);
+  margin-bottom: clamp(1.5rem, 1.2rem + 1vw, 2.25rem);
+  border-bottom: 1px solid var(--grey-light);
+}
+
+.heading {
+  font-size: var(--step-2);
+  margin-bottom: 0.75rem;
+}
+
+.content {
+  display: grid;
+  gap: 1rem;
+  max-width: var(--measure);
+}
+
+.content ul {
+  display: grid;
+  gap: 0.4rem;
+  padding-left: 1.25rem;
+}
+
+.content a {
+  color: var(--black);
+  font-weight: 500;
+}
+
+/* Cookie table: scrolls inside its own box on narrow screens. */
+.tableWrap {
+  overflow-x: auto;
+}
+
+.content table {
+  width: 100%;
+  /* Keeps every column readable on phones; the wrapper scrolls instead. */
+  min-width: 36rem;
+  border-collapse: collapse;
+  font-size: var(--step--1);
+}
+
+.content th,
+.content td {
+  text-align: left;
+  vertical-align: top;
+  padding: 0.6rem 0.75rem;
+  border: 1px solid var(--black);
+}
+
+.content th {
+  background: var(--grey-light);
+  font-weight: 500;
+}
+
+.content code {
+  font-family: ui-monospace, "SF Mono", Menlo, Consolas, monospace;
+  font-size: 0.95em;
+  white-space: nowrap;
+}
+
+.contact {
+  margin-top: clamp(1rem, 0.8rem + 1vw, 2rem);
+  padding: clamp(1.25rem, 1rem + 1vw, 2rem);
+  border: 2px solid var(--black);
+  border-left: 0.4rem solid var(--yellow);
+  max-width: var(--measure);
+}
+
+.contact a {
+  color: var(--black);
+  font-weight: 500;
+}
+
+/* Inline button styled as a link, used to reopen the cookie settings. */
+.linkButton {
+  padding: 0;
+  border: 0;
+  background: none;
+  color: var(--black);
+  font: inherit;
+  font-weight: 500;
+  text-decoration: underline;
+  cursor: pointer;
+}
+
+.caption {
+  text-align: left;
+  font-weight: 500;
+  padding-bottom: 0.5rem;
+}
