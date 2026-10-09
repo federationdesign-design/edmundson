@@ -2,13 +2,6 @@
 
 Content that was missing when the homepage was built. Each item is marked in code with a `PLACEHOLDER` comment and, where rendered, a `data-placeholder` attribute.
 
-## Company details
-
-| Item | Where | Current placeholder | Needed |
-|---|---|---|---|
-| Company number | `lib/site.ts` `COMPANY_NUMBER`, shown in footer | `[COMPANY NUMBER]` | Companies House number |
-| Registered office | `lib/site.ts` `REGISTERED_OFFICE`, shown in footer | `[REGISTERED OFFICE ADDRESS]` | Full registered office address |
-
 ## Images
 
 | Item | Where | Current placeholder | Needed |

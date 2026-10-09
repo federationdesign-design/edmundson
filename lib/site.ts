@@ -6,7 +6,7 @@ export const PHONE_HREF = "tel:+441616370368";
 export const EMAIL = "sales@edmondsonlifting.co.uk";
 export const EMAIL_HREF = `mailto:${EMAIL}`;
 
-// Trading address. Not the registered office, which is still a placeholder.
+// Trading address, which is also the registered office.
 export const ADDRESS = {
   lines: ["Unit 2, Wharf Street", "Chadderton", "Oldham", "Lancashire", "OL9 7PF"],
   streetAddress: "Unit 2, Wharf Street, Chadderton",
@@ -22,9 +22,14 @@ export const MAPS_URL = `https://www.google.com/maps/search/?api=1&query=${encod
   "Edmondson Lifting Ltd, Unit 2, Wharf Street, Chadderton, Oldham, OL9 7PF",
 )}`;
 
-// PLACEHOLDER: see PLACEHOLDERS.md. Replace once supplied by the client.
-export const COMPANY_NUMBER = "[COMPANY NUMBER]";
-export const REGISTERED_OFFICE = "[REGISTERED OFFICE ADDRESS]";
+// Registered company details, shown in the footer.
+export const COMPANY_NAME = "Edmondson Lifting Limited";
+export const COMPANY_NUMBER = "08144417";
+export const REGISTERED_OFFICE = [
+  ADDRESS.streetAddress,
+  ADDRESS.locality,
+  ADDRESS.postalCode,
+].join(", ");
 
 export const NAV_LINKS = [
   { href: "/", label: "Home" },

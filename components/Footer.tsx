@@ -1,5 +1,6 @@
 import Link from "next/link";
 import {
+  COMPANY_NAME,
   COMPANY_NUMBER,
   EMAIL,
   EMAIL_HREF,
@@ -37,9 +38,9 @@ export function Footer() {
         </div>
 
         <div className={`${styles.row} ${styles.secondary}`}>
-          {/* PLACEHOLDER: company number and registered office, see PLACEHOLDERS.md */}
-          <p className={styles.company} data-placeholder="company-details">
-            Company number: {COMPANY_NUMBER}. Registered office: {REGISTERED_OFFICE}.
+          <p className={styles.company}>
+            {COMPANY_NAME}. Company number: {COMPANY_NUMBER}. Registered office:{" "}
+            {REGISTERED_OFFICE}.
           </p>
           <nav aria-label="Legal">
             <ul className={styles.legal} role="list">
