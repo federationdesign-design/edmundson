@@ -27,10 +27,6 @@ Content that was missing when the homepage was built. Each item is marked in cod
 
 No real Drive credentials were available, so the Drive path was tested against a mocked Drive API only (listing with pagination, JPEG, PNG and HEIC files, filtering, alt text, the image route, and the failure fallbacks). Once the two variables above are set in Vercel, check `/our-work` on the preview deployment shows the folder's photos. If it still shows the nine local photos, the Vercel function logs will contain a `[drive]` line saying why.
 
-## Google Maps link needs checking
-
-`MAPS_URL` in `lib/site.ts` (the Open in Google Maps link on the Contact page) is a Google Maps search for "Edmondson Lifting Ltd, Unit 2, Wharf Street, Chadderton, Oldham, OL9 7PF". The previous address-only search landed on the wrong property. Replace it with the exact link to the business listing or pin, then check it opens the right building.
-
 ## Contact form: live sending untested
 
 Sending was tested against a mocked Resend API only (recipient, sender, Reply-To, subject, HTML escaping, spam checks and failures). Before launch, verify `edmondsonlifting.co.uk` as a sending domain in Resend (SPF and DKIM records in DNS), set the three variables above in Vercel, and send one real test enquiry from the preview deployment.

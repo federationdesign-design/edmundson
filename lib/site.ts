@@ -16,11 +16,8 @@ export const ADDRESS = {
   country: "GB",
 } as const;
 
-// PLACEHOLDER: a search including the company name, pending the exact
-// Google Maps link from Steve (see PLACEHOLDERS.md).
-export const MAPS_URL = `https://www.google.com/maps/search/?api=1&query=${encodeURIComponent(
-  "Edmondson Lifting Ltd, Unit 2, Wharf Street, Chadderton, Oldham, OL9 7PF",
-)}`;
+// Exact Google Maps link to the business, supplied by Steve.
+export const MAPS_URL = "https://maps.app.goo.gl/ujC5R76YeGsdiNgF8";
 
 // Registered company details, shown in the footer.
 export const COMPANY_NAME = "Edmondson Lifting Limited";
