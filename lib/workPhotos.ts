@@ -5,8 +5,8 @@ export type WorkPhoto = {
   alt: string;
 };
 
-// Local crops of the supplied photos. Used by the Services page grid, and by
-// the Our Work gallery whenever the Google Drive feed is unavailable.
+// Local crops of the supplied photos. Used by the Our Work gallery whenever
+// the Google Drive feed is unavailable.
 export const LOCAL_WORK_PHOTOS: WorkPhoto[] = [
   {
     src: "/images/site/work-gantry-hoist-stair.jpg",

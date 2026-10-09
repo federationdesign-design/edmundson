@@ -1,6 +1,5 @@
 import type { Metadata } from "next";
 import { PageHero } from "../../components/PageHero";
-import { OurWork } from "../../components/services/OurWork";
 import { Quotation } from "../../components/services/Quotation";
 import { ServiceChecklist } from "../../components/services/ServiceChecklist";
 import styles from "./page.module.css";
@@ -26,7 +25,6 @@ export default function ServicesPage() {
         body="From bespoke fabrication to on-site maintenance, we provide a complete range of lifting and safety solutions. Take a look at our services below and view examples of our recent work."
       />
       <ServiceChecklist />
-      <OurWork />
       <Quotation />
     </>
   );
