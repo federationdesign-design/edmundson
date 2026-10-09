@@ -18,8 +18,10 @@ export const ADDRESS = {
   country: "GB",
 } as const;
 
+// PLACEHOLDER: a search including the company name, pending the exact
+// Google Maps link from Steve (see PLACEHOLDERS.md).
 export const MAPS_URL = `https://www.google.com/maps/search/?api=1&query=${encodeURIComponent(
-  ADDRESS.lines.join(", "),
+  "Edmondson Lifting Ltd, Unit 2, Wharf Street, Chadderton, Oldham, OL9 7PF",
 )}`;
 
 // PLACEHOLDER: see PLACEHOLDERS.md. Replace once supplied by the client.
