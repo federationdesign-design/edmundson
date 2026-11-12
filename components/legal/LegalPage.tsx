@@ -1,6 +1,6 @@
 import Link from "next/link";
 import type { ReactNode } from "react";
-import { EMAIL, EMAIL_HREF, PHONE_DISPLAY, PHONE_HREF } from "../../lib/site";
+import { EMAIL_HREF, PHONE_DISPLAY, PHONE_HREF } from "../../lib/site";
 import styles from "./LegalPage.module.css";
 
 export type LegalSection = { heading: string; content: ReactNode };
@@ -41,8 +41,8 @@ export function LegalPage({
 
         <aside className={styles.contact} aria-label="Questions about this page">
           <p>
-            Questions about this page? Contact us at <a href={EMAIL_HREF}>{EMAIL}</a> or
-            call <a href={PHONE_HREF}>{PHONE_DISPLAY}</a>.
+            Questions about this page? <a href={EMAIL_HREF}>Email us</a> or call{" "}
+            <a href={PHONE_HREF}>{PHONE_DISPLAY}</a>.
           </p>
         </aside>
       </div>

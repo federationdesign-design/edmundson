@@ -2,7 +2,6 @@ import Link from "next/link";
 import {
   COMPANY_NAME,
   COMPANY_NUMBER,
-  EMAIL,
   EMAIL_HREF,
   LEGAL_LINKS,
   PHONE_DISPLAY,
@@ -32,7 +31,7 @@ export function Footer() {
             </li>
             <li className={styles.sepItem} aria-hidden="true" />
             <li>
-              <a href={EMAIL_HREF}>{EMAIL}</a>
+              <a href={EMAIL_HREF}>Email us</a>
             </li>
           </ul>
         </div>

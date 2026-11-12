@@ -4,7 +4,6 @@ import { LegalPage, type LegalSection } from "../../components/legal/LegalPage";
 import {
   COMPANY_NAME,
   COMPANY_NUMBER,
-  EMAIL,
   EMAIL_HREF,
   PHONE_DISPLAY,
   PHONE_HREF,
@@ -196,9 +195,8 @@ const sections: LegalSection[] = [
           </li>
         </ul>
         <p>
-          To exercise any of these rights, contact us at <a href={EMAIL_HREF}>{EMAIL}</a>{" "}
-          or call <a href={PHONE_HREF}>{PHONE_DISPLAY}</a>. We will respond within one
-          month.
+          To exercise any of these rights, <a href={EMAIL_HREF}>email us</a> or call{" "}
+          <a href={PHONE_HREF}>{PHONE_DISPLAY}</a>. We will respond within one month.
         </p>
       </>
     ),

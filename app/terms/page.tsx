@@ -4,7 +4,6 @@ import { LegalPage, type LegalSection } from "../../components/legal/LegalPage";
 import {
   COMPANY_NAME,
   COMPANY_NUMBER,
-  EMAIL,
   EMAIL_HREF,
   REGISTERED_OFFICE,
   SITE_URL,
@@ -142,7 +141,7 @@ const sections: LegalSection[] = [
       <p>
         We may update these terms from time to time. The current version will always be
         available on this page with the date it was last updated. If you have any
-        questions about these terms, contact us at <a href={EMAIL_HREF}>{EMAIL}</a>.
+        questions about these terms, please <a href={EMAIL_HREF}>email us</a>.
       </p>
     ),
   },

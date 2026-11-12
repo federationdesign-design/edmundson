@@ -1,7 +1,6 @@
 import type { ComponentType, ReactNode, SVGProps } from "react";
 import {
   ADDRESS,
-  EMAIL,
   EMAIL_HREF,
   MAPS_URL,
   PHONE_DISPLAY,
@@ -41,7 +40,7 @@ export function ContactDetails() {
         </Item>
         <Item label="Email" Icon={MailIcon}>
           <a href={EMAIL_HREF} className={styles.email}>
-            {EMAIL}
+            Email us
           </a>
         </Item>
         <Item label="Address" Icon={MapPinIcon}>

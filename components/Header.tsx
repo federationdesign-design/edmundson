@@ -3,7 +3,7 @@
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { useCallback, useEffect, useId, useRef, useState } from "react";
-import { EMAIL, EMAIL_HREF, NAV_LINKS, PHONE_DISPLAY, PHONE_HREF } from "../lib/site";
+import { EMAIL_HREF, NAV_LINKS, PHONE_DISPLAY, PHONE_HREF } from "../lib/site";
 import { CloseIcon, MailIcon, MenuIcon, PhoneIcon } from "./icons";
 import { Logo } from "./Logo";
 import section from "./Section.module.css";
@@ -71,7 +71,7 @@ function ContactLinks({ className }: { className: string }) {
       <li>
         <a href={EMAIL_HREF} className={`${styles.contactLink} ${styles.email}`}>
           <MailIcon className={styles.contactIcon} />
-          {EMAIL}
+          Email us
         </a>
       </li>
     </ul>
