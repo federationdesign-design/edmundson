@@ -3,7 +3,7 @@ export const SITE_URL = "https://edmondsonlifting.co.uk";
 
 export const PHONE_DISPLAY = "0161 637 0368";
 export const PHONE_HREF = "tel:+441616370368";
-export const EMAIL = "sales@edmondsonlifting.co.uk";
+export const EMAIL = "edmondsonlifting@gmail.com";
 export const EMAIL_HREF = `mailto:${EMAIL}`;
 
 // Trading address, which is also the registered office.

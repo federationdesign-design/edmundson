@@ -116,15 +116,22 @@
   font-size: 0.9em;
 }
 
+.mailLink {
+  display: inline-flex;
+  align-items: center;
+  padding: 0.3rem;
+  color: var(--white);
+}
+
+.mailLink:focus-visible {
+  outline-offset: 2px;
+}
+
 .contactIcon {
   width: 1.15em;
   height: 1.15em;
   flex: none;
   color: var(--yellow);
-}
-
-.stickyContact {
-  gap: 0.1rem;
 }
 
 .mobileControls {
@@ -230,8 +237,12 @@
     display: flex;
   }
 
+  /* Nudged down to share the nav text's axis; the inline-block nav links
+     carry a descender gap below them that pushes their text lower. */
   .contact {
-    flex-direction: column;
+    align-items: center;
+    gap: 0.65rem;
+    translate: 0 0.14rem;
   }
 
   .mobileControls {

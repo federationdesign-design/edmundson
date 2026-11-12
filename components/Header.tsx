@@ -40,6 +40,25 @@ function NavLinks({
   );
 }
 
+// Desktop header: mail icon only, then the phone, on one row.
+function HeaderContact({ className }: { className: string }) {
+  return (
+    <ul className={className} role="list">
+      <li>
+        <a href={EMAIL_HREF} className={styles.mailLink} aria-label="Email us">
+          <MailIcon className={styles.contactIcon} />
+        </a>
+      </li>
+      <li>
+        <a href={PHONE_HREF} className={styles.contactLink}>
+          <PhoneIcon className={styles.contactIcon} />
+          {PHONE_DISPLAY}
+        </a>
+      </li>
+    </ul>
+  );
+}
+
 function ContactLinks({ className }: { className: string }) {
   return (
     <ul className={className} role="list">
@@ -175,7 +194,7 @@ export function Header() {
           <nav className={styles.nav} aria-label="Main">
             <NavLinks pathname={pathname} className={styles.navList} />
           </nav>
-          <ContactLinks className={styles.contact} />
+          <HeaderContact className={styles.contact} />
           <MobileControls menuId={menuId} open={menuOpen} onOpen={openMenu} />
         </div>
       </header>
@@ -193,7 +212,7 @@ export function Header() {
           <nav className={styles.nav} aria-label="Main, compact">
             <NavLinks pathname={pathname} className={styles.navList} />
           </nav>
-          <ContactLinks className={`${styles.contact} ${styles.stickyContact}`} />
+          <HeaderContact className={styles.contact} />
           <MobileControls menuId={menuId} open={menuOpen} onOpen={openMenu} />
         </div>
       </div>

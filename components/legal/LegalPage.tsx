@@ -6,7 +6,7 @@ import styles from "./LegalPage.module.css";
 export type LegalSection = { heading: string; content: ReactNode };
 
 // Last updated date shared by the three legal pages.
-export const LEGAL_LAST_UPDATED = "9 October 2026";
+export const LEGAL_LAST_UPDATED = "12 November 2026";
 
 // Simple text page for the privacy, cookie and terms pages: breadcrumb, title,
 // last updated date, numbered sections and a closing contact box.
